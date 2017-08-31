@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="restaurantCell" id="676-Rg-fS2" customClass="BRSRestaurantCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="421" height="180"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="421" height="180"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cWu-Ta-jtj">
+                        <rect key="frame" x="0.0" y="0.0" width="421" height="180"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cellGradientBackground" translatesAutoresizingMaskIntoConstraints="NO" id="nR8-KC-qz1">
+                        <rect key="frame" x="0.0" y="0.0" width="421" height="180"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category type" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bq7-4c-9K4">
+                        <rect key="frame" x="12" y="157.5" width="397" height="16.5"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2C-3W-JN2">
+                        <rect key="frame" x="12" y="129.5" width="397" height="22"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="cWu-Ta-jtj" firstAttribute="leading" secondItem="676-Rg-fS2" secondAttribute="leading" id="6ke-ER-WDQ"/>
+                <constraint firstItem="nR8-KC-qz1" firstAttribute="leading" secondItem="676-Rg-fS2" secondAttribute="leading" id="8EM-U5-Jd7"/>
+                <constraint firstItem="bq7-4c-9K4" firstAttribute="top" secondItem="W2C-3W-JN2" secondAttribute="bottom" constant="6" id="Bwj-gZ-1RU"/>
+                <constraint firstAttribute="trailing" secondItem="nR8-KC-qz1" secondAttribute="trailing" id="FV8-Du-ODQ"/>
+                <constraint firstAttribute="bottom" secondItem="nR8-KC-qz1" secondAttribute="bottom" id="Lfp-cs-9kQ"/>
+                <constraint firstAttribute="trailing" secondItem="cWu-Ta-jtj" secondAttribute="trailing" id="MhL-iT-Jv5"/>
+                <constraint firstItem="bq7-4c-9K4" firstAttribute="leading" secondItem="676-Rg-fS2" secondAttribute="leading" constant="12" id="OfB-Hj-GkQ"/>
+                <constraint firstItem="cWu-Ta-jtj" firstAttribute="top" secondItem="676-Rg-fS2" secondAttribute="top" id="S6p-QD-h8H"/>
+                <constraint firstAttribute="bottom" secondItem="bq7-4c-9K4" secondAttribute="bottom" constant="6" id="T2L-yZ-cY4"/>
+                <constraint firstAttribute="trailing" secondItem="W2C-3W-JN2" secondAttribute="trailing" constant="12" id="TdL-hF-1gR"/>
+                <constraint firstItem="nR8-KC-qz1" firstAttribute="top" secondItem="676-Rg-fS2" secondAttribute="top" id="YKD-Bj-PZL"/>
+                <constraint firstAttribute="bottom" secondItem="cWu-Ta-jtj" secondAttribute="bottom" id="bHP-o3-muk"/>
+                <constraint firstAttribute="trailing" secondItem="bq7-4c-9K4" secondAttribute="trailing" constant="12" id="ie2-jB-Dvv"/>
+                <constraint firstAttribute="trailing" secondItem="bq7-4c-9K4" secondAttribute="trailing" constant="12" id="jXb-W7-g4p"/>
+                <constraint firstItem="bq7-4c-9K4" firstAttribute="leading" secondItem="W2C-3W-JN2" secondAttribute="leading" id="re7-Zz-zrU"/>
+            </constraints>
+            <connections>
+                <outlet property="categoryNameLabel" destination="bq7-4c-9K4" id="os5-7T-dbX"/>
+                <outlet property="imageView" destination="cWu-Ta-jtj" id="1uL-dj-Q1Q"/>
+                <outlet property="restaurantNameLabel" destination="W2C-3W-JN2" id="yiU-F9-nNg"/>
+            </connections>
+            <point key="canvasLocation" x="-220" y="-159"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="cellGradientBackground" width="320" height="180"/>
+    </resources>
+</document>
