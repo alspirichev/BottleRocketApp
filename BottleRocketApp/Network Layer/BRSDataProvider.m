@@ -7,44 +7,55 @@
 //
 
 #import "BRSDataProvider.h"
-#import "BRSDataAPIClient.h"
 #import "BRSAPI.h"
+
+static NSString * const restaurantsKey = @"restaurants";
 
 @implementation BRSDataProvider
 
-- (void)getRestaurants:(void (^)(NSArray<BRSRestaurant *> * _Nullable))success
-			   failure:(void (^)(NSHTTPURLResponse * _Nullable, NSError * _Nullable))failure
++ (instancetype)sharedInstance
 {
-	AFHTTPSessionManager *manager = [BRSDataAPIClient sharedClient];
-	[manager GET:kRestaurants
-	  parameters:nil
-		progress:nil
-		 success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-			 NSDictionary *responseDictionary = (NSDictionary *)responseObject;
-			 NSArray *data = responseDictionary[@"restaurants"];
+	static BRSDataProvider *sharedInstance = nil;
+	
+	static dispatch_once_t onceToken;
+	dispatch_once(&onceToken, ^{
+		sharedInstance = [[BRSDataProvider alloc] init];
+	});
 
-			 if (data.count > 0)
-			 {
-				 NSError *error = nil;
-				 NSArray<BRSRestaurant *> *restaurants = [MTLJSONAdapter modelsOfClass:[BRSRestaurant class]
-																		  fromJSONArray:data
-																				  error:&error];
-				 if (!error)
-				 {
-					 success(restaurants);
-				 }
-				 else
-				 {
-					 failure((NSHTTPURLResponse *) nil, error);
-				 }
-			 }
-			 else
-			 {
-				 success(nil);
-			 }
-		 } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-			 failure((NSHTTPURLResponse *) nil, error);
-		 }];
+	return sharedInstance;
+}
+
+- (void)getRestaurants:(void (^)(NSArray<BRSRestaurant *> * _Nullable))success
+			   failure:(void (^)(NSError * _Nullable))failure
+{
+	NSURL *url = [NSURL URLWithString:RESTAURANTS_URL];
+	NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+	NSURLSession *session = [NSURLSession sharedSession];
+
+	[[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+		if (data != nil)
+		{
+			NSError *serializationError = nil;
+			NSDictionary *restaurantsDict = [NSJSONSerialization JSONObjectWithData:data options: 0 error:&serializationError];
+			NSArray<BRSRestaurant *> *restaurants = [MTLJSONAdapter modelsOfClass:[BRSRestaurant class]
+																	fromJSONArray:[restaurantsDict valueForKey:restaurantsKey]
+																			error:&serializationError];
+			dispatch_async(dispatch_get_main_queue(), ^{
+				if (!serializationError)
+				{
+					success(restaurants);
+				}
+				else
+				{
+					failure(serializationError);
+				}
+			});
+		}
+		else
+		{
+			failure(error);
+		}
+	}] resume];
 }
 
 @end

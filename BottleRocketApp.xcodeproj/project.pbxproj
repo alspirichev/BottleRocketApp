@@ -11,13 +11,13 @@
 		CD9FA0741F57F2B7008EC7D1 /* BRSRestaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9FA0731F57F2B7008EC7D1 /* BRSRestaurant.m */; };
 		CD9FA0771F57F2FC008EC7D1 /* BRSContact.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9FA0761F57F2FC008EC7D1 /* BRSContact.m */; };
 		CD9FA07A1F57F31E008EC7D1 /* BRSLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9FA0791F57F31E008EC7D1 /* BRSLocation.m */; };
-		CD9FA07D1F57F34B008EC7D1 /* BRSDataAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9FA07C1F57F34B008EC7D1 /* BRSDataAPIClient.m */; };
 		CD9FA0801F57F3BB008EC7D1 /* BRSDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9FA07F1F57F3BB008EC7D1 /* BRSDataProvider.m */; };
 		CD9FA08C1F57FE3A008EC7D1 /* BRSRestaurantsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9FA0891F57FE3A008EC7D1 /* BRSRestaurantsViewController.m */; };
 		CD9FA08D1F57FE3A008EC7D1 /* BRSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9FA08B1F57FE3A008EC7D1 /* BRSWebViewController.m */; };
 		CD9FA08F1F57FE67008EC7D1 /* BRSRestaurantsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9FA08E1F57FE67008EC7D1 /* BRSRestaurantsCell.xib */; };
 		CD9FA0921F5801B3008EC7D1 /* BRSRestaurantCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9FA0911F5801B3008EC7D1 /* BRSRestaurantCollectionViewCell.m */; };
 		CD9FA0951F581801008EC7D1 /* BRSDetailRestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9FA0941F581801008EC7D1 /* BRSDetailRestaurantViewController.m */; };
+		CDA4F7001F5BFA47006E062D /* BRSRestaurantsMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA4F6FF1F5BFA47006E062D /* BRSRestaurantsMapViewController.m */; };
 		CDE267EA1F5861190055FC4D /* UIViewController+BRSAutoratation.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE267E91F5861190055FC4D /* UIViewController+BRSAutoratation.m */; };
 		CDEC106D1F57EA74000DC756 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEC106C1F57EA74000DC756 /* main.m */; };
 		CDEC10701F57EA74000DC756 /* BRSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEC106F1F57EA74000DC756 /* BRSAppDelegate.m */; };
@@ -36,8 +36,6 @@
 		CD9FA0761F57F2FC008EC7D1 /* BRSContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRSContact.m; path = Models/BRSContact.m; sourceTree = "<group>"; };
 		CD9FA0781F57F31E008EC7D1 /* BRSLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRSLocation.h; path = Models/BRSLocation.h; sourceTree = "<group>"; };
 		CD9FA0791F57F31E008EC7D1 /* BRSLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRSLocation.m; path = Models/BRSLocation.m; sourceTree = "<group>"; };
-		CD9FA07B1F57F34B008EC7D1 /* BRSDataAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRSDataAPIClient.h; path = "Network Layer/BRSDataAPIClient.h"; sourceTree = "<group>"; };
-		CD9FA07C1F57F34B008EC7D1 /* BRSDataAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRSDataAPIClient.m; path = "Network Layer/BRSDataAPIClient.m"; sourceTree = "<group>"; };
 		CD9FA07E1F57F3BB008EC7D1 /* BRSDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRSDataProvider.h; path = "Network Layer/BRSDataProvider.h"; sourceTree = "<group>"; };
 		CD9FA07F1F57F3BB008EC7D1 /* BRSDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRSDataProvider.m; path = "Network Layer/BRSDataProvider.m"; sourceTree = "<group>"; };
 		CD9FA0881F57FE3A008EC7D1 /* BRSRestaurantsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRSRestaurantsViewController.h; path = "Presentation Layer/View Controllers/BRSRestaurantsViewController.h"; sourceTree = "<group>"; };
@@ -49,6 +47,8 @@
 		CD9FA0911F5801B3008EC7D1 /* BRSRestaurantCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRSRestaurantCollectionViewCell.m; path = "Presentation Layer/View/BRSRestaurantCollectionViewCell.m"; sourceTree = "<group>"; };
 		CD9FA0931F581801008EC7D1 /* BRSDetailRestaurantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRSDetailRestaurantViewController.h; path = "Presentation Layer/View Controllers/BRSDetailRestaurantViewController.h"; sourceTree = "<group>"; };
 		CD9FA0941F581801008EC7D1 /* BRSDetailRestaurantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRSDetailRestaurantViewController.m; path = "Presentation Layer/View Controllers/BRSDetailRestaurantViewController.m"; sourceTree = "<group>"; };
+		CDA4F6FE1F5BFA47006E062D /* BRSRestaurantsMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRSRestaurantsMapViewController.h; path = "Presentation Layer/View Controllers/BRSRestaurantsMapViewController.h"; sourceTree = "<group>"; };
+		CDA4F6FF1F5BFA47006E062D /* BRSRestaurantsMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRSRestaurantsMapViewController.m; path = "Presentation Layer/View Controllers/BRSRestaurantsMapViewController.m"; sourceTree = "<group>"; };
 		CDE267E81F5861190055FC4D /* UIViewController+BRSAutoratation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+BRSAutoratation.h"; path = "Utils/UIViewController+BRSAutoratation.h"; sourceTree = "<group>"; };
 		CDE267E91F5861190055FC4D /* UIViewController+BRSAutoratation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+BRSAutoratation.m"; path = "Utils/UIViewController+BRSAutoratation.m"; sourceTree = "<group>"; };
 		CDEC10681F57EA74000DC756 /* BottleRocketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BottleRocketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,8 +104,6 @@
 			isa = PBXGroup;
 			children = (
 				CD9FA0701F57EFD8008EC7D1 /* BRSAPI.h */,
-				CD9FA07B1F57F34B008EC7D1 /* BRSDataAPIClient.h */,
-				CD9FA07C1F57F34B008EC7D1 /* BRSDataAPIClient.m */,
 				CD9FA07E1F57F3BB008EC7D1 /* BRSDataProvider.h */,
 				CD9FA07F1F57F3BB008EC7D1 /* BRSDataProvider.m */,
 			);
@@ -144,6 +142,8 @@
 				CD9FA08B1F57FE3A008EC7D1 /* BRSWebViewController.m */,
 				CD9FA0931F581801008EC7D1 /* BRSDetailRestaurantViewController.h */,
 				CD9FA0941F581801008EC7D1 /* BRSDetailRestaurantViewController.m */,
+				CDA4F6FE1F5BFA47006E062D /* BRSRestaurantsMapViewController.h */,
+				CDA4F6FF1F5BFA47006E062D /* BRSRestaurantsMapViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -294,13 +294,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BottleRocketApp-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		74F0B41595FFDF9A21626171 /* [CP] Copy Pods Resources */ = {
@@ -325,10 +328,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDA4F7001F5BFA47006E062D /* BRSRestaurantsMapViewController.m in Sources */,
 				CD9FA0801F57F3BB008EC7D1 /* BRSDataProvider.m in Sources */,
 				CD9FA0921F5801B3008EC7D1 /* BRSRestaurantCollectionViewCell.m in Sources */,
 				CD9FA0951F581801008EC7D1 /* BRSDetailRestaurantViewController.m in Sources */,
-				CD9FA07D1F57F34B008EC7D1 /* BRSDataAPIClient.m in Sources */,
 				CD9FA0771F57F2FC008EC7D1 /* BRSContact.m in Sources */,
 				CD9FA08C1F57FE3A008EC7D1 /* BRSRestaurantsViewController.m in Sources */,
 				CDEC10701F57EA74000DC756 /* BRSAppDelegate.m in Sources */,

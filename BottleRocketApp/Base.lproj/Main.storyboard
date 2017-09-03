@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="S4s-44-1zJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="S4s-44-1zJ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,6 +9,12 @@
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-DemiBold</string>
+            <string>AvenirNext-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Web View Controller-->
         <scene sceneID="XPa-5I-c1T">
@@ -95,24 +101,81 @@
                                     <outlet property="delegate" destination="A6c-Bj-8gn" id="J77-Wk-lL1"/>
                                 </connections>
                             </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="9G3-GN-lok">
+                                <rect key="frame" x="177.5" y="323" width="20" height="20"/>
+                                <color key="color" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="htD-JO-cKO" firstAttribute="leading" secondItem="tI2-FM-IIa" secondAttribute="leading" id="SGq-B7-cMl"/>
+                            <constraint firstItem="9G3-GN-lok" firstAttribute="centerY" secondItem="tI2-FM-IIa" secondAttribute="centerY" id="Tz6-pV-28s"/>
                             <constraint firstAttribute="trailing" secondItem="htD-JO-cKO" secondAttribute="trailing" id="fen-RT-17N"/>
                             <constraint firstItem="2b9-gP-eMI" firstAttribute="top" secondItem="htD-JO-cKO" secondAttribute="bottom" id="hRa-Qc-ixw"/>
+                            <constraint firstItem="9G3-GN-lok" firstAttribute="centerX" secondItem="tI2-FM-IIa" secondAttribute="centerX" id="umW-dr-KYi"/>
                             <constraint firstItem="htD-JO-cKO" firstAttribute="top" secondItem="4T6-0r-dNg" secondAttribute="bottom" id="zub-6W-UVF"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Lunch Time" id="FpM-z9-NZ6"/>
+                    <navigationItem key="navigationItem" title="Lunch Time" id="FpM-z9-NZ6">
+                        <barButtonItem key="rightBarButtonItem" image="icon_map" id="FNV-ZH-qO2">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="CIz-E0-67j" kind="presentation" identifier="showRestaurantsMapSegue" modalTransitionStyle="flipHorizontal" id="Y4o-Zf-ZMw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="9G3-GN-lok" id="dP8-4T-2vt"/>
                         <outlet property="collectionView" destination="htD-JO-cKO" id="ujf-MD-Btc"/>
                         <segue destination="bAX-QI-nVa" kind="show" identifier="showDetailRestaurantViewController" id="013-dW-SxL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fVz-bG-q25" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1143.2" y="-535.68215892053979"/>
+            <point key="canvasLocation" x="1180" y="-690"/>
+        </scene>
+        <!--Restaurants-->
+        <scene sceneID="Z6D-J2-oIW">
+            <objects>
+                <viewController id="3KX-sw-tnZ" customClass="BRSRestaurantsMapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="H7a-Q8-7eW"/>
+                        <viewControllerLayoutGuide type="bottom" id="Icj-FS-YiI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="X18-bb-I01">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lRj-Vd-cyu">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <connections>
+                                    <outlet property="delegate" destination="3KX-sw-tnZ" id="ONe-Bj-0mI"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lRj-Vd-cyu" firstAttribute="top" secondItem="H7a-Q8-7eW" secondAttribute="bottom" id="Y7u-Y0-mXy"/>
+                            <constraint firstItem="lRj-Vd-cyu" firstAttribute="leading" secondItem="X18-bb-I01" secondAttribute="leading" id="krY-84-NQB"/>
+                            <constraint firstAttribute="trailing" secondItem="lRj-Vd-cyu" secondAttribute="trailing" id="rpC-zi-q4j"/>
+                            <constraint firstItem="Icj-FS-YiI" firstAttribute="top" secondItem="lRj-Vd-cyu" secondAttribute="bottom" id="vBb-HU-GLu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Restaurants" id="NzN-Yi-Sgj">
+                        <barButtonItem key="rightBarButtonItem" image="ic_close" id="cWz-mp-VVE">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="dismissViewController:" destination="3KX-sw-tnZ" id="pr7-FE-wPc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="restaurantsMapView" destination="lRj-Vd-cyu" id="AeR-TA-zcH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qyp-dV-3CK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2913" y="119"/>
         </scene>
         <!--Lunch Time-->
         <scene sceneID="ZMU-zT-2XO">
@@ -226,11 +289,12 @@
                         <outlet property="phoneLabel" destination="Wic-7D-qgm" id="LC4-hM-iiX"/>
                         <outlet property="restaurantName" destination="g48-D8-gjE" id="lVM-i4-Xpe"/>
                         <outlet property="twitterNameLabel" destination="Jix-p7-ase" id="glG-nF-djT"/>
+                        <segue destination="CIz-E0-67j" kind="presentation" identifier="showRestaurantOnMapSegue" modalTransitionStyle="flipHorizontal" id="0bJ-7R-hA7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wi1-2X-BKO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2008.8" y="-536.58170914542734"/>
+            <point key="canvasLocation" x="2046" y="-690"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="gTm-wM-aGb">
@@ -277,7 +341,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sbd-dz-l4c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="204" y="-535.68215892053979"/>
+            <point key="canvasLocation" x="241" y="-690"/>
         </scene>
         <!--Internets-->
         <scene sceneID="va8-Be-ll7">
@@ -305,12 +369,42 @@
             </objects>
             <point key="canvasLocation" x="204" y="119.1904047976012"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gUI-CY-jhK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CIz-E0-67j" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KoO-Os-ten">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.2627450980392157" green="0.90980392156862744" blue="0.58431372549019611" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3KX-sw-tnZ" kind="relationship" relationship="rootViewController" id="MRS-YW-GRh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8jr-qT-IBf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2046" y="119"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="ic_close" width="19" height="18"/>
         <image name="ic_webBack" width="13" height="25"/>
         <image name="ic_webForward" width="13" height="25"/>
         <image name="ic_webRefresh" width="29" height="25"/>
+        <image name="icon_map" width="30" height="30"/>
         <image name="tab_internets" width="18" height="22"/>
         <image name="tab_lunch" width="24" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Y4o-Zf-ZMw"/>
+    </inferredMetricsTieBreakers>
 </document>

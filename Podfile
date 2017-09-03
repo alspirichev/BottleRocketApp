@@ -3,7 +3,6 @@
 
 target 'BottleRocketApp' do
 
-pod 'AFNetworking', '~> 3.0'
 pod 'Mantle'
 pod 'SDWebImage', '~> 4.0'
 

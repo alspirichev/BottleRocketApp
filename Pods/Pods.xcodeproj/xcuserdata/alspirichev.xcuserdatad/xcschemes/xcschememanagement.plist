@@ -4,30 +4,31 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AFNetworking.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Mantle.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>0</integer>
 		</dict>
 		<key>Pods-BottleRocketApp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0BB2720A588FEEC59CCA137FD63DB93C</key>
+		<key>74A6956ED180CCEAB3CA54B7F4CCA9DD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -37,12 +38,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9E033EDB5EC0819481B0546434FA577B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D1A384E113C5E536333BC736A15ADFB1</key>
+		<key>FEA44F6AB00ADF1802FD47ED6FE97BB2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -7,9 +7,12 @@
 //
 
 #import "BRSDetailRestaurantViewController.h"
+#import "BRSRestaurantsMapViewController.h"
 #import <MapKit/MapKit.h>
 
 static NSString * const MAP_ANNOTATION_IDENTIFIER = @"RestaurantMapIdentifier";
+static NSString * const MAP_ICON_NAME = @"icon_map";
+static NSString * const showRestaurantOnMapSegue = @"showRestaurantOnMapSegue";
 
 @interface BRSDetailRestaurantViewController () <MKMapViewDelegate>
 
@@ -20,6 +23,7 @@ static NSString * const MAP_ANNOTATION_IDENTIFIER = @"RestaurantMapIdentifier";
 @property (weak, nonatomic) IBOutlet UILabel *cityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
 @property (weak, nonatomic) IBOutlet UILabel *twitterNameLabel;
+@property (nonatomic, strong) UIBarButtonItem *mapBarButtonItem;
 
 @end
 
@@ -29,6 +33,29 @@ static NSString * const MAP_ANNOTATION_IDENTIFIER = @"RestaurantMapIdentifier";
 {
     [super viewDidLoad];
 	[self setupDetailRestaurantViewControllerFromRestaurant:self.restaurant];
+
+	self.mapBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:MAP_ICON_NAME]
+															 style:UIBarButtonItemStylePlain
+															target:self
+															action:@selector(showRestaurantOnMap)];
+	self.navigationItem.rightBarButtonItem = self.mapBarButtonItem;
+}
+
+#pragma mark - Actions
+
+- (void)showRestaurantOnMap
+{
+	[self performSegueWithIdentifier:showRestaurantOnMapSegue sender:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+	if ([segue.identifier isEqualToString:showRestaurantOnMapSegue])
+	{
+		UINavigationController *navigationController = segue.destinationViewController;
+		BRSRestaurantsMapViewController *restaurantsMapViewController = navigationController.viewControllers.firstObject;
+		restaurantsMapViewController.markers = @[self.restaurant];
+	}
 }
 
 - (void)setupDetailRestaurantViewControllerFromRestaurant:(BRSRestaurant *)restaurant

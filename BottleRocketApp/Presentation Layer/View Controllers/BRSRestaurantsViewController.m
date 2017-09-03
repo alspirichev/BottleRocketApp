@@ -10,16 +10,18 @@
 #import "BRSDataProvider.h"
 #import "BRSRestaurantCollectionViewCell.h"
 #import "BRSDetailRestaurantViewController.h"
+#import "BRSRestaurantsMapViewController.h"
 
 static NSInteger const COLUMNS_COUNT_FOR_REGULAR = 2;
 static NSInteger const COLUMNS_COUNT_FOR_COMPACT = 1;
 static NSString * const showDetailRestaurantSegue = @"showDetailRestaurantViewController";
+static NSString * const showRestaurantsMapSegue = @"showRestaurantsMapSegue";
 
-@interface BRSRestaurantsViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@interface BRSRestaurantsViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, BRSRestaurantsMapViewControllerDelegate>
 
-@property (nonatomic, strong) BRSDataProvider *dataProvider;
 @property (nonatomic, strong) NSArray<BRSRestaurant *> *restaurants;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
 
@@ -29,17 +31,18 @@ static NSString * const showDetailRestaurantSegue = @"showDetailRestaurantViewCo
 {
     [super viewDidLoad];
 
-	self.dataProvider = [BRSDataProvider new];
 	[self.collectionView registerNib:[BRSRestaurantCollectionViewCell cellNib]
 		  forCellWithReuseIdentifier:[BRSRestaurantCollectionViewCell cellIdentifier]];
 
 	__block BRSRestaurantsViewController *weakSelf = self;
-	[self.dataProvider getRestaurants:^(NSArray<BRSRestaurant *> * _Nullable restaurants) {
+	[[BRSDataProvider sharedInstance] getRestaurants:^(NSArray<BRSRestaurant *> * _Nullable restaurants) {
+		[weakSelf.activityIndicator stopAnimating];
 		weakSelf.restaurants = restaurants;
 		[weakSelf.collectionView reloadData];
-	} failure:^(NSHTTPURLResponse * _Nullable response, NSError * _Nullable error) {
+	} failure:^(NSError * _Nullable error) {
+		[weakSelf.activityIndicator stopAnimating];
 		UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Ooopps!"
-																		message:@"There were occur some errors with a server."
+																		message:@"There were occur some error."
 																 preferredStyle:UIAlertControllerStyleAlert];
 		UIAlertAction *tryLaterAction = [UIAlertAction actionWithTitle:@"Try later."
 																 style:UIAlertActionStyleDefault
@@ -64,6 +67,22 @@ static NSString * const showDetailRestaurantSegue = @"showDetailRestaurantViewCo
 		BRSDetailRestaurantViewController *detailRestaurantViewController = segue.destinationViewController;
 		detailRestaurantViewController.restaurant = (BRSRestaurant *)sender;	
 	}
+	else if ([segue.identifier isEqualToString:showRestaurantsMapSegue])
+	{
+		UINavigationController *navigationController = segue.destinationViewController;
+		BRSRestaurantsMapViewController *restaurantsMapViewController = navigationController.viewControllers.firstObject;
+		restaurantsMapViewController.delegate = self;
+		restaurantsMapViewController.markers = self.restaurants;
+	}
+}
+
+#pragma mark - BRSRestaurantsMapViewControllerDelegate
+
+- (void)mapViewController:(BRSRestaurantsMapViewController *)restaurantsMapController didSelectMarker:(id <MKAnnotation>)marker
+{
+	[self dismissViewControllerAnimated:YES completion:^{
+		[self performSegueWithIdentifier:showDetailRestaurantSegue sender:marker];
+	}];
 }
 
 #pragma mark - UICollectionViewDataSource

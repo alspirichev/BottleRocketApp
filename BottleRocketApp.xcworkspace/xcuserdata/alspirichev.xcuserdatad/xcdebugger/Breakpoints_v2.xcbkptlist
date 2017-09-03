@@ -9,14 +9,46 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BottleRocketApp/Presentation Layer/View Controllers/BRSRestaurantsMapViewController.m"
-            timestampString = "525890489.514745"
+            filePath = "BottleRocketApp/Presentation Layer/View Controllers/BRSRestaurantsViewController.m"
+            timestampString = "526162734.039681"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[BRSRestaurantsViewController viewDidLoad]"
+                  moduleName = "BottleRocketApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alspirichev/Documents/TESTS/BottleRocketApp/BottleRocketApp/Presentation%20Layer/View%20Controllers/BRSRestaurantsViewController.m"
+                  timestampString = "526163030.656473"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "341">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__43-[BRSRestaurantsViewController viewDidLoad]_block_invoke"
+                  moduleName = "BottleRocketApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alspirichev/Documents/TESTS/BottleRocketApp/BottleRocketApp/Presentation%20Layer/View%20Controllers/BRSRestaurantsViewController.m"
+                  timestampString = "526163030.660222"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -25,13 +57,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BottleRocketApp/Presentation Layer/View Controllers/BRSRestaurantsMapViewController.m"
-            timestampString = "525890677.146549"
+            filePath = "BottleRocketApp/Presentation Layer/View Controllers/BRSRestaurantsViewController.m"
+            timestampString = "526162738.570657"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "-viewWillAppear:"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

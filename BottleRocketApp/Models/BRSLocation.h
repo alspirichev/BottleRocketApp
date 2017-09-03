@@ -22,4 +22,5 @@
 @property (nonatomic, copy) NSString *country;
 @property (nonatomic, strong) NSArray *formattedAddress;
 @property (nonatomic, copy, readonly) NSString *fullAddress;
+
 @end
