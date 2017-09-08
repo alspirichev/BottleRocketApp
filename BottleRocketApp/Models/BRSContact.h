@@ -14,4 +14,6 @@
 @property (nonatomic, copy) NSString *formattedPhone;
 @property (nonatomic, copy) NSString *twitter;
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
 @end

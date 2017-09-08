@@ -8,13 +8,13 @@
 
 #import "BRSRestaurantCollectionViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "BRSRestaurantImageView.h"
 
 static NSString * const cellIdentifier = @"restaurantCell";
-static NSString * const cellNibName = @"BRSRestaurantsCell";
 
 @interface BRSRestaurantCollectionViewCell ()
 
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet BRSRestaurantImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *restaurantNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *categoryNameLabel;
 
@@ -27,16 +27,11 @@ static NSString * const cellNibName = @"BRSRestaurantsCell";
 	return cellIdentifier;
 }
 
-+ (UINib *)cellNib
-{
-	return [UINib nibWithNibName:cellNibName bundle:nil];
-}
-
-- (void)configureCellWithRestaurant:(BRSRestaurant *)restaurant
+- (void)configureCellWithRestaurant:(BRSRestaurant *)restaurant andCacheImage:(NSCache *)imageCache
 {
 	self.restaurantNameLabel.text = restaurant.name;
 	self.categoryNameLabel.text = restaurant.category;
-	[self.imageView sd_setImageWithURL:restaurant.imageURL];
+	[self.imageView loadImageByURL:restaurant.imageURL andCacheImage:imageCache];
 }
 
 @end

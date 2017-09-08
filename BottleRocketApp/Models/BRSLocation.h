@@ -23,4 +23,6 @@
 @property (nonatomic, strong) NSArray *formattedAddress;
 @property (nonatomic, copy, readonly) NSString *fullAddress;
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
 @end

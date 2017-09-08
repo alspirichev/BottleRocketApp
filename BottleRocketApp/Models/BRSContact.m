@@ -10,6 +10,15 @@
 
 @implementation BRSContact
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary
+{
+	self.phone = [dictionary valueForKey:@"phone"];
+	self.formattedPhone = [dictionary valueForKey:@"formattedPhone"];
+	self.twitter = [dictionary valueForKey:@"twitter"];
+
+	return self;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey
 {
 	return @{

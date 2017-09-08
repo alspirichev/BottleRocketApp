@@ -20,4 +20,6 @@
 @property (nonatomic, strong) BRSContact *contact;
 @property (nonatomic, strong) BRSLocation *location;
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
 @end

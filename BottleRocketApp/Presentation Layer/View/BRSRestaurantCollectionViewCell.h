@@ -14,8 +14,7 @@ static CGFloat const RESTAURANT_CELL_HEIGHT = 180;
 @interface BRSRestaurantCollectionViewCell : UICollectionViewCell
 
 + (NSString *)cellIdentifier;
-+ (UINib *)cellNib;
 
-- (void)configureCellWithRestaurant:(BRSRestaurant *)restaurant;
+- (void)configureCellWithRestaurant:(BRSRestaurant *)restaurant andCacheImage:(NSCache *)imageCache;
 
 @end

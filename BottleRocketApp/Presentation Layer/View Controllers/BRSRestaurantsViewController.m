@@ -22,6 +22,7 @@ static NSString * const showRestaurantsMapSegue = @"showRestaurantsMapSegue";
 @property (nonatomic, strong) NSArray<BRSRestaurant *> *restaurants;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (nonatomic, strong) NSCache *imageCache;
 
 @end
 
@@ -31,8 +32,7 @@ static NSString * const showRestaurantsMapSegue = @"showRestaurantsMapSegue";
 {
     [super viewDidLoad];
 
-	[self.collectionView registerNib:[BRSRestaurantCollectionViewCell cellNib]
-		  forCellWithReuseIdentifier:[BRSRestaurantCollectionViewCell cellIdentifier]];
+	self.imageCache = [NSCache new];
 
 	__block BRSRestaurantsViewController *weakSelf = self;
 	[[BRSDataProvider sharedInstance] getRestaurants:^(NSArray<BRSRestaurant *> * _Nullable restaurants) {
@@ -98,7 +98,7 @@ static NSString * const showRestaurantsMapSegue = @"showRestaurantsMapSegue";
 	BRSRestaurantCollectionViewCell *cell =
 	[self.collectionView dequeueReusableCellWithReuseIdentifier:[BRSRestaurantCollectionViewCell cellIdentifier]
 												   forIndexPath:indexPath];
-	[cell configureCellWithRestaurant:self.restaurants[indexPath.row]];
+	[cell configureCellWithRestaurant:self.restaurants[indexPath.row] andCacheImage:self.imageCache];
 
 	return cell;
 }

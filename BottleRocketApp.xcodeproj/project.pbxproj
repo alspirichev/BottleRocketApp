@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		202E9BA3EB98A43806A77409 /* libPods-BottleRocketApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B06ED70FE0077FF44FB7100 /* libPods-BottleRocketApp.a */; };
+		CD02F2031F6291D50064E1DF /* BRSRestaurantImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD02F2021F6291D50064E1DF /* BRSRestaurantImageView.m */; };
+		CD02F2061F62A93C0064E1DF /* BRSJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CD02F2051F62A93C0064E1DF /* BRSJSONParser.m */; };
 		CD9FA0741F57F2B7008EC7D1 /* BRSRestaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9FA0731F57F2B7008EC7D1 /* BRSRestaurant.m */; };
 		CD9FA0771F57F2FC008EC7D1 /* BRSContact.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9FA0761F57F2FC008EC7D1 /* BRSContact.m */; };
 		CD9FA07A1F57F31E008EC7D1 /* BRSLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9FA0791F57F31E008EC7D1 /* BRSLocation.m */; };
 		CD9FA0801F57F3BB008EC7D1 /* BRSDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9FA07F1F57F3BB008EC7D1 /* BRSDataProvider.m */; };
 		CD9FA08C1F57FE3A008EC7D1 /* BRSRestaurantsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9FA0891F57FE3A008EC7D1 /* BRSRestaurantsViewController.m */; };
 		CD9FA08D1F57FE3A008EC7D1 /* BRSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9FA08B1F57FE3A008EC7D1 /* BRSWebViewController.m */; };
-		CD9FA08F1F57FE67008EC7D1 /* BRSRestaurantsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9FA08E1F57FE67008EC7D1 /* BRSRestaurantsCell.xib */; };
 		CD9FA0921F5801B3008EC7D1 /* BRSRestaurantCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9FA0911F5801B3008EC7D1 /* BRSRestaurantCollectionViewCell.m */; };
 		CD9FA0951F581801008EC7D1 /* BRSDetailRestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9FA0941F581801008EC7D1 /* BRSDetailRestaurantViewController.m */; };
 		CDA4F7001F5BFA47006E062D /* BRSRestaurantsMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA4F6FF1F5BFA47006E062D /* BRSRestaurantsMapViewController.m */; };
@@ -29,6 +30,10 @@
 /* Begin PBXFileReference section */
 		30505147713E90F004A07A6F /* Pods-BottleRocketApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BottleRocketApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-BottleRocketApp/Pods-BottleRocketApp.release.xcconfig"; sourceTree = "<group>"; };
 		5B06ED70FE0077FF44FB7100 /* libPods-BottleRocketApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BottleRocketApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD02F2011F6291D50064E1DF /* BRSRestaurantImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRSRestaurantImageView.h; path = "Presentation Layer/View/BRSRestaurantImageView.h"; sourceTree = "<group>"; };
+		CD02F2021F6291D50064E1DF /* BRSRestaurantImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRSRestaurantImageView.m; path = "Presentation Layer/View/BRSRestaurantImageView.m"; sourceTree = "<group>"; };
+		CD02F2041F62A93C0064E1DF /* BRSJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRSJSONParser.h; path = Utils/BRSJSONParser.h; sourceTree = "<group>"; };
+		CD02F2051F62A93C0064E1DF /* BRSJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRSJSONParser.m; path = Utils/BRSJSONParser.m; sourceTree = "<group>"; };
 		CD9FA0701F57EFD8008EC7D1 /* BRSAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BRSAPI.h; path = "Network Layer/BRSAPI.h"; sourceTree = "<group>"; };
 		CD9FA0721F57F2B7008EC7D1 /* BRSRestaurant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRSRestaurant.h; path = Models/BRSRestaurant.h; sourceTree = "<group>"; };
 		CD9FA0731F57F2B7008EC7D1 /* BRSRestaurant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRSRestaurant.m; path = Models/BRSRestaurant.m; sourceTree = "<group>"; };
@@ -42,7 +47,6 @@
 		CD9FA0891F57FE3A008EC7D1 /* BRSRestaurantsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRSRestaurantsViewController.m; path = "Presentation Layer/View Controllers/BRSRestaurantsViewController.m"; sourceTree = "<group>"; };
 		CD9FA08A1F57FE3A008EC7D1 /* BRSWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRSWebViewController.h; path = "Presentation Layer/View Controllers/BRSWebViewController.h"; sourceTree = "<group>"; };
 		CD9FA08B1F57FE3A008EC7D1 /* BRSWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRSWebViewController.m; path = "Presentation Layer/View Controllers/BRSWebViewController.m"; sourceTree = "<group>"; };
-		CD9FA08E1F57FE67008EC7D1 /* BRSRestaurantsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BRSRestaurantsCell.xib; path = "Presentation Layer/View/BRSRestaurantsCell.xib"; sourceTree = "<group>"; };
 		CD9FA0901F5801B3008EC7D1 /* BRSRestaurantCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRSRestaurantCollectionViewCell.h; path = "Presentation Layer/View/BRSRestaurantCollectionViewCell.h"; sourceTree = "<group>"; };
 		CD9FA0911F5801B3008EC7D1 /* BRSRestaurantCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRSRestaurantCollectionViewCell.m; path = "Presentation Layer/View/BRSRestaurantCollectionViewCell.m"; sourceTree = "<group>"; };
 		CD9FA0931F581801008EC7D1 /* BRSDetailRestaurantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRSDetailRestaurantViewController.h; path = "Presentation Layer/View Controllers/BRSDetailRestaurantViewController.h"; sourceTree = "<group>"; };
@@ -128,7 +132,8 @@
 			children = (
 				CD9FA0901F5801B3008EC7D1 /* BRSRestaurantCollectionViewCell.h */,
 				CD9FA0911F5801B3008EC7D1 /* BRSRestaurantCollectionViewCell.m */,
-				CD9FA08E1F57FE67008EC7D1 /* BRSRestaurantsCell.xib */,
+				CD02F2011F6291D50064E1DF /* BRSRestaurantImageView.h */,
+				CD02F2021F6291D50064E1DF /* BRSRestaurantImageView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -153,6 +158,8 @@
 			children = (
 				CDE267E81F5861190055FC4D /* UIViewController+BRSAutoratation.h */,
 				CDE267E91F5861190055FC4D /* UIViewController+BRSAutoratation.m */,
+				CD02F2041F62A93C0064E1DF /* BRSJSONParser.h */,
+				CD02F2051F62A93C0064E1DF /* BRSJSONParser.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -265,7 +272,6 @@
 			files = (
 				CDEC107B1F57EA74000DC756 /* LaunchScreen.storyboard in Resources */,
 				CDEC10781F57EA74000DC756 /* Assets.xcassets in Resources */,
-				CD9FA08F1F57FE67008EC7D1 /* BRSRestaurantsCell.xib in Resources */,
 				CDEC10761F57EA74000DC756 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,10 +341,12 @@
 				CD9FA0771F57F2FC008EC7D1 /* BRSContact.m in Sources */,
 				CD9FA08C1F57FE3A008EC7D1 /* BRSRestaurantsViewController.m in Sources */,
 				CDEC10701F57EA74000DC756 /* BRSAppDelegate.m in Sources */,
+				CD02F2031F6291D50064E1DF /* BRSRestaurantImageView.m in Sources */,
 				CDE267EA1F5861190055FC4D /* UIViewController+BRSAutoratation.m in Sources */,
 				CD9FA07A1F57F31E008EC7D1 /* BRSLocation.m in Sources */,
 				CD9FA0741F57F2B7008EC7D1 /* BRSRestaurant.m in Sources */,
 				CDEC106D1F57EA74000DC756 /* main.m in Sources */,
+				CD02F2061F62A93C0064E1DF /* BRSJSONParser.m in Sources */,
 				CD9FA08D1F57FE3A008EC7D1 /* BRSWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

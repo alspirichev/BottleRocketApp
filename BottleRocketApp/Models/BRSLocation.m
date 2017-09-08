@@ -10,6 +10,21 @@
 
 @implementation BRSLocation
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+{
+	self.address = [dictionary valueForKey:@"address"];
+	self.latitude = [[dictionary valueForKey:@"lat"] doubleValue];
+	self.longitude = [[dictionary valueForKey:@"lng"] doubleValue];
+	self.postalCode = [dictionary valueForKey:@"postalCode"];
+	self.countryCode = [dictionary valueForKey:@"cc"];
+	self.city = [dictionary valueForKey:@"city"];
+	self.state = [dictionary valueForKey:@"state"];
+	self.country = [dictionary valueForKey:@"country"];
+	self.formattedAddress = [dictionary valueForKey:@"formattedAddress"];
+
+	return self;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey
 {
 	return @{
