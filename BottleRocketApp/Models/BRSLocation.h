@@ -6,10 +6,9 @@
 //  Copyright © 2017 Alexander Spirichev. All rights reserved.
 //
 
-#import <Mantle/Mantle.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface BRSLocation : MTLModel <MTLJSONSerializing>
+@interface BRSLocation : NSObject
 
 @property (nonatomic, copy) NSString *address;
 @property (nonatomic, assign) double latitude;

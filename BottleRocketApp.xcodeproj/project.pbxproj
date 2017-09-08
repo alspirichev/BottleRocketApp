@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		202E9BA3EB98A43806A77409 /* libPods-BottleRocketApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B06ED70FE0077FF44FB7100 /* libPods-BottleRocketApp.a */; };
 		CD02F2031F6291D50064E1DF /* BRSRestaurantImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD02F2021F6291D50064E1DF /* BRSRestaurantImageView.m */; };
 		CD02F2061F62A93C0064E1DF /* BRSJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CD02F2051F62A93C0064E1DF /* BRSJSONParser.m */; };
 		CD9FA0741F57F2B7008EC7D1 /* BRSRestaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9FA0731F57F2B7008EC7D1 /* BRSRestaurant.m */; };
@@ -71,7 +70,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				202E9BA3EB98A43806A77409 /* libPods-BottleRocketApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,12 +213,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CDEC107F1F57EA74000DC756 /* Build configuration list for PBXNativeTarget "BottleRocketApp" */;
 			buildPhases = (
-				6AF24D4A14CB077661D6EFAE /* [CP] Check Pods Manifest.lock */,
 				CDEC10641F57EA74000DC756 /* Sources */,
 				CDEC10651F57EA74000DC756 /* Frameworks */,
 				CDEC10661F57EA74000DC756 /* Resources */,
-				64B69FD92DFCA2C7D49CA690 /* [CP] Embed Pods Frameworks */,
-				74F0B41595FFDF9A21626171 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -277,57 +272,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		64B69FD92DFCA2C7D49CA690 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BottleRocketApp/Pods-BottleRocketApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6AF24D4A14CB077661D6EFAE /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BottleRocketApp-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		74F0B41595FFDF9A21626171 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BottleRocketApp/Pods-BottleRocketApp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CDEC10641F57EA74000DC756 /* Sources */ = {

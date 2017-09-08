@@ -11,7 +11,7 @@
 
 @interface BRSDataProvider : NSObject
 
-+ (instancetype)sharedInstance;
++ (nonnull instancetype)sharedInstance;
 
 - (void)getRestaurants:(nonnull void (^)(NSArray<BRSRestaurant *> * _Nullable restaurants))success
 			   failure:(nonnull void (^)(NSError * _Nullable error))failure;

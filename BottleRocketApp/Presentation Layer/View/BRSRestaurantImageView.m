@@ -21,6 +21,7 @@
 {
 	self.activityIndicatorView = [[UIActivityIndicatorView alloc]
 								  initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+	// TODO: Not center
 	self.activityIndicatorView.center = self.center;
 	[self addSubview:self.activityIndicatorView];
 	[self.activityIndicatorView startAnimating];

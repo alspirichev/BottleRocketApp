@@ -19,15 +19,6 @@
 	return self;
 }
 
-+ (NSDictionary *)JSONKeyPathsByPropertyKey
-{
-	return @{
-			 @"phone": @"phone",
-			 @"formattedPhone": @"formattedPhone",
-			 @"twitter": @"twitter"
-			 };
-}
-
 - (NSString *)twitter
 {
 	if (_twitter.length == 0)

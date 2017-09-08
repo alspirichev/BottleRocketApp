@@ -7,7 +7,6 @@
 //
 
 #import "BRSRestaurantCollectionViewCell.h"
-#import <SDWebImage/UIImageView+WebCache.h>
 #import "BRSRestaurantImageView.h"
 
 static NSString * const cellIdentifier = @"restaurantCell";

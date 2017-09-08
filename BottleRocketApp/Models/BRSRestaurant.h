@@ -6,13 +6,11 @@
 //  Copyright © 2017 Alexander Spirichev. All rights reserved.
 //
 
-#import <Mantle/Mantle.h>
-#import "Mantle.h"
 #import "BRSContact.h"
 #import "BRSLocation.h"
 #import <MapKit/MapKit.h>
 
-@interface BRSRestaurant : MTLModel <MTLJSONSerializing, MKAnnotation>
+@interface BRSRestaurant : NSObject <MKAnnotation>
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSURL *imageURL;

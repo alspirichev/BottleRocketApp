@@ -6,9 +6,9 @@
 //  Copyright © 2017 Alexander Spirichev. All rights reserved.
 //
 
-#import <Mantle/Mantle.h>
+#import <Foundation/Foundation.h>
 
-@interface BRSContact : MTLModel <MTLJSONSerializing>
+@interface BRSContact : NSObject
 
 @property (nonatomic, copy) NSString *phone;
 @property (nonatomic, copy) NSString *formattedPhone;

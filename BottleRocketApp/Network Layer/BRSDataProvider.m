@@ -14,7 +14,7 @@ static NSString * const restaurantsKey = @"restaurants";
 
 @implementation BRSDataProvider
 
-+ (instancetype)sharedInstance
++ (nonnull instancetype)sharedInstance
 {
 	static BRSDataProvider *sharedInstance = nil;
 	
@@ -38,11 +38,6 @@ static NSString * const restaurantsKey = @"restaurants";
 		{
 			NSError *serializationError = nil;
 			NSDictionary *restaurantsDict = [NSJSONSerialization JSONObjectWithData:data options: 0 error:&serializationError];
-//			NSArray<BRSRestaurant *> *restaurants = [MTLJSONAdapter modelsOfClass:[BRSRestaurant class]
-//																	fromJSONArray:[restaurantsDict valueForKey:restaurantsKey]
-//																			error:&serializationError];
-
-
 			NSArray<BRSRestaurant *> *restaurants = [BRSJSONParser parseRestaurantsWithJSON:(NSArray *)[restaurantsDict valueForKey:restaurantsKey]];
 
 			dispatch_async(dispatch_get_main_queue(), ^{
