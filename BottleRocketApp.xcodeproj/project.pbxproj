@@ -27,8 +27,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		30505147713E90F004A07A6F /* Pods-BottleRocketApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BottleRocketApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-BottleRocketApp/Pods-BottleRocketApp.release.xcconfig"; sourceTree = "<group>"; };
-		5B06ED70FE0077FF44FB7100 /* libPods-BottleRocketApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BottleRocketApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD02F2011F6291D50064E1DF /* BRSRestaurantImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRSRestaurantImageView.h; path = "Presentation Layer/View/BRSRestaurantImageView.h"; sourceTree = "<group>"; };
 		CD02F2021F6291D50064E1DF /* BRSRestaurantImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRSRestaurantImageView.m; path = "Presentation Layer/View/BRSRestaurantImageView.m"; sourceTree = "<group>"; };
 		CD02F2041F62A93C0064E1DF /* BRSJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRSJSONParser.h; path = Utils/BRSJSONParser.h; sourceTree = "<group>"; };
@@ -62,7 +60,6 @@
 		CDEC10771F57EA74000DC756 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDEC107A1F57EA74000DC756 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDEC107C1F57EA74000DC756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E5D8279EA9D759403AC07D0B /* Pods-BottleRocketApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BottleRocketApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BottleRocketApp/Pods-BottleRocketApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,23 +73,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0CE350B53D46A211CFD9E33F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5B06ED70FE0077FF44FB7100 /* libPods-BottleRocketApp.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		313E4AA566108C772086EC98 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E5D8279EA9D759403AC07D0B /* Pods-BottleRocketApp.debug.xcconfig */,
-				30505147713E90F004A07A6F /* Pods-BottleRocketApp.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		CD9FA06B1F57EE48008EC7D1 /* Presentation Layer */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,8 +147,6 @@
 			children = (
 				CDEC106A1F57EA74000DC756 /* BottleRocketApp */,
 				CDEC10691F57EA74000DC756 /* Products */,
-				313E4AA566108C772086EC98 /* Pods */,
-				0CE350B53D46A211CFD9E33F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -317,56 +295,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		CDEC107D1F57EA74000DC756 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		CDEC107E1F57EA74000DC756 /* Release */ = {
+		CD02F2091F668AB80064E1DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -407,11 +336,10 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
-		CDEC10801F57EA74000DC756 /* Debug */ = {
+		CD02F20A1F668AB80064E1DF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5D8279EA9D759403AC07D0B /* Pods-BottleRocketApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -425,42 +353,24 @@
 			};
 			name = Debug;
 		};
-		CDEC10811F57EA74000DC756 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 30505147713E90F004A07A6F /* Pods-BottleRocketApp.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = BottleRocketApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alspirichev.BottleRocketApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		CDEC10631F57EA74000DC756 /* Build configuration list for PBXProject "BottleRocketApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CDEC107D1F57EA74000DC756 /* Debug */,
-				CDEC107E1F57EA74000DC756 /* Release */,
+				CD02F2091F668AB80064E1DF /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		CDEC107F1F57EA74000DC756 /* Build configuration list for PBXNativeTarget "BottleRocketApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CDEC10801F57EA74000DC756 /* Debug */,
-				CDEC10811F57EA74000DC756 /* Release */,
+				CD02F20A1F668AB80064E1DF /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

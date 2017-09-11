@@ -11,7 +11,6 @@
 @interface BRSRestaurantImageView ()
 
 @property (nonatomic, strong) NSURL *imageURL;
-@property (nonatomic, strong) UIActivityIndicatorView *activityIndicatorView;
 
 @end
 
@@ -19,13 +18,6 @@
 
 - (void)loadImageByURL:(NSURL *)url andCacheImage:(NSCache *)imageCache
 {
-	self.activityIndicatorView = [[UIActivityIndicatorView alloc]
-								  initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
-	// TODO: Not center
-	self.activityIndicatorView.center = self.center;
-	[self addSubview:self.activityIndicatorView];
-	[self.activityIndicatorView startAnimating];
-
 	self.imageURL = url;
 	self.image = nil;
 
@@ -49,7 +41,6 @@
 						}
 
 						[imageCache setObject:image forKey:url];
-						[self.activityIndicatorView stopAnimating];
 					});
 				}
 			}] resume];

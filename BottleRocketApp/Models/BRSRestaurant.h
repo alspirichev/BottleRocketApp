@@ -13,8 +13,8 @@
 @interface BRSRestaurant : NSObject <MKAnnotation>
 
 @property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSURL *imageURL;
 @property (nonatomic, copy) NSString *category;
+@property (nonatomic, strong) NSURL *imageURL;
 @property (nonatomic, strong) BRSContact *contact;
 @property (nonatomic, strong) BRSLocation *location;
 
