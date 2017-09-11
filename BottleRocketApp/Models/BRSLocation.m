@@ -15,15 +15,15 @@
 	self = [self init];
 	if (self)
 	{
-		self.address = [dictionary valueForKey:@"address"];
-		self.latitude = [[dictionary valueForKey:@"lat"] doubleValue];
-		self.longitude = [[dictionary valueForKey:@"lng"] doubleValue];
-		self.postalCode = [dictionary valueForKey:@"postalCode"];
-		self.countryCode = [dictionary valueForKey:@"cc"];
-		self.city = [dictionary valueForKey:@"city"];
-		self.state = [dictionary valueForKey:@"state"];
-		self.country = [dictionary valueForKey:@"country"];
-		self.formattedAddress = [dictionary valueForKey:@"formattedAddress"];
+		_address = [dictionary valueForKey:@"address"];
+		_latitude = [[dictionary valueForKey:@"lat"] doubleValue];
+		_longitude = [[dictionary valueForKey:@"lng"] doubleValue];
+		_postalCode = [dictionary valueForKey:@"postalCode"];
+		_countryCode = [dictionary valueForKey:@"cc"];
+		_city = [dictionary valueForKey:@"city"];
+		_state = [dictionary valueForKey:@"state"];
+		_country = [dictionary valueForKey:@"country"];
+		_formattedAddress = [dictionary valueForKey:@"formattedAddress"];
 	}
 
 	return self;

@@ -15,9 +15,9 @@
 	self = [self init];
 	if (self)
 	{
-		self.phone = [dictionary valueForKey:@"phone"];
-		self.formattedPhone = [dictionary valueForKey:@"formattedPhone"];
-		self.twitter = [dictionary valueForKey:@"twitter"];
+		_phone = [dictionary valueForKey:@"phone"];
+		_formattedPhone = [dictionary valueForKey:@"formattedPhone"];
+		_twitter = [dictionary valueForKey:@"twitter"];
 	}
 	
 	return self;

@@ -15,11 +15,11 @@
 	self = [self init];
 	if (self)
 	{
-		self.name = [dictionary valueForKey:@"name"];
-		self.imageURL = [[NSURL alloc] initWithString:[dictionary valueForKey:@"backgroundImageURL"]];
-		self.category = [dictionary valueForKey:@"category"];
-		self.contact = [[BRSContact alloc] initWithDictionary:[dictionary valueForKey:@"contact"]];
-		self.location = [[BRSLocation alloc] initWithDictionary:[dictionary valueForKey:@"location"]];
+		_name = [dictionary valueForKey:@"name"];
+		_imageURL = [[NSURL alloc] initWithString:[dictionary valueForKey:@"backgroundImageURL"]];
+		_category = [dictionary valueForKey:@"category"];
+		_contact = [[BRSContact alloc] initWithDictionary:[dictionary valueForKey:@"contact"]];
+		_location = [[BRSLocation alloc] initWithDictionary:[dictionary valueForKey:@"location"]];
 	}
 
 	return self;
